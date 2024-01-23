@@ -1,0 +1,40 @@
+.header-section
+{
+    border: 1px solid black;
+    width: 100%;
+}
+
+.header-table
+{
+    width: 100%;
+}
+.cb-logo,
+.enquiry,
+.heading
+{
+    width: 30%;
+    
+}
+.heading
+{
+    text-decoration: underline;
+    
+}
+
+.cb-logo-img
+{
+    background-image: url('https://coding-blocks.github.io/assets/images/cb/cblogo.png');
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    margin: auto;
+}
+
+.heading,
+.enquiry
+{
+    width: 60%;
+    font-size: 30px;
+    margin: auto;
+}
