@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
 .header-section
 {
     border: 1px solid black;
@@ -15,10 +20,10 @@
     width: 30%;
     
 }
+
 .heading
 {
     text-decoration: underline;
-    
 }
 
 .cb-logo-img
@@ -35,6 +40,27 @@
 .enquiry
 {
     width: 60%;
-    font-size: 30px;
+    font-size: 25px;
     margin: auto;
+}
+
+.info-table
+{
+    width: 100%;
+    border: 2px solid pink;
+    height: 200px;
+}
+
+.info-details
+{
+    width: 45%;
+    height: 200px;
+    border: 1px solid black;
+
+}
+
+
+.info-field
+{
+   font-size:  26px; 
 }
