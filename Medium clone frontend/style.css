@@ -1,0 +1,41 @@
+.trending-heading{
+   align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.trending-heading-text
+{
+    font-size: 16px;
+   
+}
+
+.trending-heading img
+{
+    height: 30px;
+    display: inline-block;
+}
+
+.article
+{
+    display: flex;
+    gap: 10px;
+}
+
+
+.article-no,
+.article-detail
+{
+    border: 1px solid black;
+}
+
+.article-detail
+{
+    flex-grow: 1;
+}
+
+.article-no{
+    color: #706c6c;
+    font-size: 40px;
+}
