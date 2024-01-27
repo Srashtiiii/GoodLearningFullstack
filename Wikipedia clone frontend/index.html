@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="left-section">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="30" viewBox="0 0 12 16" id="three">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#000">
+                            <path
+                                d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="logo-and-text">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRUVFRYYGBgVHB4ZHRwcGBocGB0eGR4hHBoaFiEcIS8lHCEwHxoaJjgmKzAxNUM1JiQ7Tjs0QC80NTEBDAwMDw8PEA8PEDEdGB00NDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMf/AABEIAHEBvAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQcDBAYBCAL/xABGEAACAQMCAgcEAw8CBQUAAAABAgADBBESIQUxBgcTIkFRYTJxgZEUQqEjMzQ1UmJyc4KxsrPB0fAV4UN0g5KiCCVVpPH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALmiIgIiICJiq1lUZY4nlGsrZ0nOk6T7xvj7RAzREQEREBE13ukAYl17oJO4JAHM4G8xWnEadXIQ5I8DsSPMZ5iBuxEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBMVeppGfHwn6ZsAk+Eja9wAVLH2mCjAJ3OwG2fnygRjVqjIlVmIZ8DSoIOCcBUDjYk7kkeXlOgs7ZaahFzgeJ5knck+sjqigVFdvYQE5/OJABI8gCZucV4ilvTNSoSFG2wySTyA9YG7NC8qFlKqSpyN8eAO45+IyJDWnTa1ZC7saRBxofdzsCGCpqJG/wBhn6o8Wev36FJnQsQHYqi7HBLAkswHoB4+PIPBxhEJAY7siagrMmp2KqAygqDq2OeW0/VW4ZwTq1DJB32yDgjbbIIIma5sEOABhQ/aEDxbOQT4DvYb3geucNK1CAqucElgCc41HJAPvJO/nKNHVv3TuPI/AzmK3EayVXVQMq+AuCCAd1ZSu/eXPe33DDGQA3Xunh5cvdNGvQXIYgagCAcAkA8xnwEInOBcS1go7d9eRPivv8SP7esnZXlfAGeRzzPryx8Z1XR3iHa08Me+ndPqPqt/T3gyKmYiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIGpePyHLxMibThiUmLgswVe6HLMV55OWJ8zjYc285ucSuVTLMdKggE4yAPM45D19ZlcZU77EenlArrivSiuXZV0aQ2cMpIONwDgjbM0+JdI7i4UpUcaTjKqgUHG+/M853q9E7Q5Jplid8l3/ownI8S4E/0krb2rhFYABixR8bklydlPv8AOBziIWOFBJ8gMn5CWR0MV1t9Do6FHbAZWGVbDAjI8yw+E6GlRSmoCqqAeCgAe4YAzPwWywxnkc7EeWM5+Pzgfls+WPPOOXwkddX9JQTrDaQzHTlzhN32TPLI+cz8W4ctdCrEqQQysvtKykFWXO2xAODseRnN9hWL1CKWGI7KsgyEY1NjcUMnGNIQsOeMjmveCXrnbAB33xsMe/eatZZv3C+Imi6kcznPy9MDwlHPdISmhlqEKhAIcglAynID45DYb+/kcZ3+jF8UqUGbbtVVWHq4GP8Ayx9szVRI24cgZHNT+7l+7MIs+Jjo1MqrflAH5jMySK1rouEY0wpqYOkMSFLY7oYgEgZxkgSs+k/WDxDh7ItzZ0AKgJVlqMytpxqAOMgjI2I8Zas43rQ4B9MsKiqM1KP3VPMlAdSjzyuoY88QNXoZ0ov79UrfR7dLdmKlu1bXhdiVXB8dt8SV6Y8VvLama1tQp1kpqWqBnYVBjmVAGGAGSd87Stuorj+ipVsnO1X7rT/TUYcDzJQA/smXcRkYO4MCp+i/WTfX9Y0aFrb6gpc6qrqNIIB8CTuw5CWFx6tdqim0p0qj5OpajlNsbaCBgnPniUVxm3fgnFw6A9mG7RAPrUXyGT4d5d/EAy0+sXpUtDh4eg2p7wBKJXckOMl1xvsp2x4ssCE6MdYPEL93ShaUPuYyzNUcIuTgAkA5JwcY8jLA41UulRTapSd895ajsq6cH2SAd845yM6AdGxYWdOkQO0bv1T5uw3GfIDCj3Z8ZLcd4olrb1rh/ZpKWx5n6qj1LYA9TArS26yeI1LlrNLCma6MVZA5wpTZiWzpAHnnHLzlk8Eq3LITdpSR9WwpszLpwMElgN852904rqe4U3ZV7+tvVvXZgTz0hjk78tTlj7gssmAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiBzHTnpUvDbcViutmYIiatOondiTg4AUE8ueB4yX4LxJbmhRuE9msgcA8xkbqceIOQfUSrOm1i/Frm9WmSafDKLKuPrV2IZ1Hn3UZT6qPObnUVxvXb1bRj3qDa0/Qc94D3Pkn9IQLXiIgIiICIiBzPSfamW0qdLA5ZHcL+dhAX9O758wMmSFqgVFXdQFA0liSMjkSxJPiOfhM9wvez/AJvj+0/J3B9xEDZSQfD7itdW/bpVNJn1FFCoyrpYqq1Aykse73sEcyBjGZLrUGxJxIay4RUUXCmqiJW1FVpIw0s5JZ+85GT4hQASSfGBtcE4ibi2t7grpLorlRuBkEHT5jJyPSbz1PHHd8/H3keX+Ymrwy17FNBqvVOc5YINIwAEVaaqqqANhjzm0zHy+ZH9MwPHmCofDOP6z9ITpHLkPE+XumOp8z8hA1Ky7jH7z/WaVYf/AJ4f58ppVuJVKtCuUHZ1Vd6SAEOQ6bAnUMEEYfl7M94fdCpQpVBnvorbnJyQCc/HMoVfs/zEguI1G7RV304+3cH+n2SauG9fs/32kNdUwXyB3j6c/LPnCLM4X95o5/IT+ETcmK3p6VVfyQB8hiZZFIiIHzZ004c/CuKdpRGF1i4pY2GknLJt4Ahlx+Tjzn0LwniKXFGlXpnKVUDjz7wzg+o5H1nF9cXR76TZGsozUtM1B5lP+IPgAG/ZkF1F9ItSVbFzumatPP5LHvqPcxDftN5QJ7rg6OfSrM1kXNW1y4xzKf8AEX5AN+z6zgeqa2N7d0e3qa14fTLUqZOdy5IIHiFZgc+YQchLK60ekBtbNkp57e6+40wPa72zsoG+QpwMeLLKbp06/A+JUjU3KBXbHJ6dRcVFG++O+oJ+soMD6ZlYda1y9zVs+FUT3rhw9THgik4J8wMO5/QEsZLpGpiqGBplQ4bO2kjUGz5Y3lc9W9I3t5e8WcHDMaNAEHZBjJGfzQgyPEvA75uE0jb/AEUr9x0ClpBK9wDSACuCNhzEoTrT4WtjdpSt3qoj0lqEGq7YYs6nBJzjCjn6z6MlCdfP4db/APLr/MqQLb6NdF7eyBaiHLuoDM9R3LY35McDc+AE5HrV6NUUtbm+Q1ErhkYlar6TqdKZyucDunwxuJZdPkPcJx3W7+Kbv/pfzqcDkup3gFO4pG8rNUepSrlUzUbQuhUYHAPeOWPPbltJPrbt0rNbUKOtr6qdNJUdhinnLtUAONO3M77E8lM5HoJ0+ocO4fVpkM9dqrMiAELgogDO3IDKnYZP75YnVvYK9L/Uajitc3gy7+CKDtRQfVC4AI8x6CB+OjnVxQoCm1epWr1kKtqNV1QMpBARVIyoI+tnP2ToeP8ARu3vAorhzozpK1HQjVjPskZ5DnmTUQPnXoXwcXHE6lpWq1mpUjV27RgW7NtKhiDt5nGJe1nwWjSt/oqKwpaWXBdi2HJLd4nVzY75lN9Wv4+uffc/xy+IHz31r8JWwr0UtnqotRCxU1XYAq2Mgsc8vWWXadXNkaSZ7cuVXL/SKofJHtbNpBzvyxOE6/vwi1/VN/HLnta6CijllChFJYsNIGBuTygVBwfpHc8N4qeH1qz16DVEpg1CWdRVCmmwY7jGpQRy9rbMtHj/AEaoXmnt1cmnq0lajoRqxn2SAfZHPMqOhb/6rx9q1DJoUKlN2cDu6aIUDfx1uhx6EnwMveB859AeE/S+IVLatWrmnTWoe7VYE6GCjJ+OdpaVz1Y2jKVWpcoSNiK7nB9zZBlX9AOKrbcVuKjrUcYrLimhdslwc6V3xtzlkV+m/b3tja0Er0hUqM1Q1KRTUiIx0KH3IJwSRjkPOB71V2j2wvrKq2upQrgk5zlalNSjAE5AIXOPfP31j9GaDW93eDtFrqmoMtWoBlAAO7q08hjlO9AnOdYX4tvf1LQKz6pujtK+pV6l01aoabhFHbVFUDTknusCTv5ztb/q3o6SbS4ubWp4Mleoy58NQZske4iQfUF+DXP60fwCWvAqPox07uba8PDuKYLagi1hgHLewWwAGRgRhsAjIz44tW6oLUR0YZV1KsMkZDDBGRuNjzEpLr8s1W4tao9qpTZT69mwIP8A5mW50UvWr2VrVc5d6KMx82KjUficmBS/WzwNLCpb/RnqotVXypquwBUruCxzvq8/CWr0P6KULVadZO0aq9JVZ3qM2Q2lm7pOkbgchK9/9QP3yy/Rq/vSXDwr7xR/Vp/CIG5ITpbxkWdpWuDjNNTpB8XbZB/3EfDMm5UnWtfVbm6tuH29I1zTIuKtMHAbHsox+qNOrJP5awOs6s+Dtb2NM1MmrcE3FQnOotU3GrO+QunPrmVZZ/8AtHHSp7tF3K+S9jX3X4KSuf0DLCHSfi//AMP/APZSV31o07247O6uLE2wpjsy4qK4bJyoONxg6t/WB9CROZ6vuNfTLC3qk5cL2b+eun3ST78BvjOmgIiICIiBFcbRuzLLnK4OzlNlOr2lGRsD4H3GanD7rtVfKkMhKEnSQSBnIwfUeXuk7UQEEHxkNStgjNgYJwCMkg6RgMM8tjj4CBt0yMAgYzDvpyTyx5gD4kmYQAc7D+vvHlNHjgY0CANZyuVwhVtxnWHZQVzuRkZ5ciRAlEPP548sz0mcM9Qq9GoWLajSJbOXKoWRAzMqnGatN9yO878wRjslqhgGBBB5EEEfAiB4GIAGOW2fDbkfP4TG7c8+GPtz/aeu+59PD3+P+eU13fwH2D+0ohbaydLm5fA0VCroM5OvQEqNpHgdK75H1vOfmytRRQUwzMFyRnG2ok4GByyTjnNy/vEprmo6ICcZZgoJ3O5J54zt6TRNyrgOhDKwyCDlSPMYgYrh/wDPd5TH0eQV7pVG4p4dzjYadwufPVpyPWYLmtznV9CuDdhSZ2XTUrnUwPNR9VT643PqceEI6aIiRSIiBjdQQQRkHYg8jnwnzXxWg/BuLakB00nFRPzqT5yuT+aWQnzBn0xK462uh1S+p0qlugavSOkrqVSyNzGWIGQ2DuRsWgRnAX/1jizXmCbWxAWkCCAz81Yg+OrU/gRimDN3rr6P9tardIMvanvYG5puQDy/JbSfQajOs6E9HVsLSnQGC/tVGH1nb2j6gbKPQCTVzbrUR0dQyOpVgeRVhhgfQgmB8/8ACembtwo8MXU1xUqLQp896VU7rk7c8pjyYY5S8+jnCVtLajbrypKFJ825s3xYk/GVt0E6tatrxB61YA0qBPYHUpLltlcgezpUnIIHexjOMy3YCUJ18/h1v/y6/wAypLxv6rrTdqado4UlU1BNR8BqOy++U5006I8V4lXFd7alSCoEVRXRiACW3bxOWPgPCBdVPkPcJx3W7+Kbv/pfzqclejd5euCt5arRKKMOtZXV25HCgZXz3JnN9YNrxK8pVbShaoKLMuarV0y6qVcaU20d4DnnYHzgQ3VPwajecJr0Kyhlau4z4qezp4ZT4EHec/wHilfgF89tc5a3qEEkA6Sp2WvTHnthgPIjcgTrOrnhXE+Hj6PUtqbUalTWXFZA6agFZsb6xhRtsee86LrF6Li/tWRVBr0+9SbIBByMqSfqkbH4HwgdPb11qKrowZXAZWBypBGQVI5giZ5VnQiw4zYIKD29KtRByFNdVdMnJ0ncaeZ045+Inc9ILy6pqn0S2W4Zs51VlphMYwSCO9nJ2GOUCoerX8fXPvuf45fEpDo70S4vaXhvRb0ndy5de2RQ3aHLAHPd33HOW3a3Vw1uaj24SvpY9h2qsNSk6F7QDHeAU5xtn0gU/wBf34Ra/qm/ili2/V/w1lVjaU9RVSd3AyR5BsfZOF6cdFuLcSqpUa2pUhTXSqiujHc5JY7Z+Qlh9F7u+OKd5apSCoMVErKwZhgY0DdcjJzk8sQJuwsKVBRTo00poNwqKFXJ5nA8fWbcSE6QXt3TCi0tkrswbJastNUIxpyCMuDk8iOXrAp/qm/HNx+jX/mLLo4jwlK729Riwa3ftEK4GSVZSrZB7pDbgYOw3lR9Fuh3F7K6N2tGi7MGDK1VQGDnJwRyOQDO7qcT4zg6bG3Bxtm5yM+owM/MQOpW9pmq1EMO0VQ5XfIViQGPhuQflIbrC/Ft7+paRXQDg97Tq3lzf47a4amBhlYBUDbLpJ0jvAY9PjPenK8Qr069pbWiGnUUL2zV0BIbBYCngEHmMk+sCA6gvwa5/Wj+AS15UfQTg3FuGLUQWlKslRg2PpCowIGNjgjGPDE6mvxTjDgrTsKFFjtqqXIqKPXSigmBwHXtcipc2lugLOiE4Ayc1WAVQBzPc5eolvdHLA0LW3oNu1KkiMfAlVAYj45nKdFur/srg317W+k3THUDjCK2MZUH2iAMDYADGBsDO4uXZUZkXW4UlV1AaiBsuTsMnbMCmf8A1A/fLL9Gr+9JcPCvvFH9Wn8IlSdOujXFuJ1Kbta0qK0gQq9ujHvEEkttnkPATv8Aolc32laN3arTFOmB2q1lYOy6VA0AZXIyc5xt6wJ++u1o06lVzhKal2PkFGT9gld9Utq9d7zilYd+6qFU8dKKcsFPiuQq/sTF0yteM39I262tOhSY5YfSEd3wdlJGAFzvjHgN/OU6EJxK1pULStZUzTQ6TVW4QFVJJyyYOo7+BEDvpD9KuEC7tLi3OM1EIXPION0PwYKZMSF49e3VPR9FtVuC2rUWrrSCYxp9pTrzluWMY9YFUdRnGDTr17J8jtBrUHbDps6455K4/wCyXjKFToLxhbw3tOlSSoarVgBVTSC7ElcZ3XDEe6W70evbypqF5arQKhcMtZaiuTnVhQMpjA5k8/SBOxEQEREBNW8oahke0OXr6TaiBzlG7B1ZBUrs6nmDjY+ox4/2mwXBGDgj5zZ4jwtapDAlHH1h4j8lh4iRNxSen7S7eY5f7fZA2DTQae4vcBC90d0HGQvkNh8hP0an+cpDXl22AVdlxzwFO352rlyPLzmBuKL3QGLhjpBCnPPGrYYK58eUomKlXxGMzXq3B/2mm9w3mPtmq9fA3MBxBEcYqIrhTqAZQ2D5gHxxIuwBShTQjSQi5HkeZHzm0HeoxSkjO/oNh7zyHOdLwbozpw9xpZhuEHsD9L8r3cvfCNLo1wMuy1qo7g3VT9Y+DH83y8/dz7aeT2RSIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgJ4RPYgR9fhNJt9Ok+anH2cvsmlU6OKeVRviAf3Yk7EDmaXRQD2q7sPLSgx8hNyj0boKckMx/Obb5LiTUQMVGiqjCqFHkAAPsmWIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiB//9k="alt="wikipedia logo">
+            </div>
+        </div>
+
+        <div class="center-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search Wikipedia">
+                <button type="button" id="search-button">Search</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="account-options">
+                <a href="#"> Create Account</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="three-dot logo">
+                <span>...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- main body-------------------------------------------------------------------------------- -->
+
+
+    <section class="main-body">
+        <div class="main-right">
+            <div class="right-heading">Lion</div>
+            <div class="right-lang">228 languages</div>
+
+            <hr width="100%" size="2">
+            <div class="article-section-left">
+                <span> Article</span>
+                <span> Talk</span>
+            </div>
+            <div class="article-section-right">
+                <span>Read</span>
+                <span>View source</span>
+                <span>View History </span>
+                <span>Tools</span>
+            </div>
+            <hr width="100%" size="2">
+
+        </div>
+
+
+        <div class="section-content-left">
+            <span>From Wikipedia, the free encyclopedia</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i>For other uses, see <a href="#">Lion
+                (disambiguation).</i></a></span>
+            <div class="content">
+                The <b>lion</b> (<i><b>Panthera leo</b></i>) is a large <a href="#">cat</a> of the genus <i><a href="#">Panthera</a></i>, native to Africa and India.
+                It has a muscular, broad-chested body; a short, rounded head; round ears; and a hairy tuft at the end of
+                its tail.
+                It is <a href="#">sexually dimorphic</a>; adult male lions are larger than females and have a prominent mane.
+                It is a <a href="#">social species</a>, forming groups called prides. A lion's pride consists of a few adult males,
+                related females, and cubs. Groups of female lions usually hunt together, preying mostly on large
+                <a href="#">ungulates</a>. The lion is an <a href="#">apex</a> and <a href="#">keystone predator</a>; although some lions scavenge when opportunities
+                occur and have been known to hunt <a href="#">humans</a>, lions typically do not actively seek out and prey on humans.
+                
+                <div class="content">
+                The lion inhabits <a href="#">grasslands, savannahs,</a> and <a href="#">shrublands</a>. It is usually more <a href="#">diurnal</a> than other wild
+                cats, but when persecuted, it adapts to being active <a href="#">at night</a> and <a href="#">at twilight</a>. During the <a href="#">Neolithic</a> period, the lion ranged
+                throughout Africa and Eurasia, from Southeast Europe to India, but it has been reduced to fragmented populations in <a href="#">sub-Saharan Africa</a>
+                and one population in <a href="#">western India</a>. It has been listed as <a href="#">Vulnerable</a> on the <a href="#">IUCN Red List</a> since 1996 because populations in
+                African countries have declined by about 43% since the early 1990s. Lion populations are untenable outside designated protected
+                areas. Although the cause of the decline is not fully understood, <a href="#">habitat loss</a> and conflicts with humans are the greatest
+                causes for concern.
+                </div>
+
+
+               <div class="content">
+                One of the most widely recognised animal symbols in human culture, the lion has been extensively
+                depicted in sculptures and paintings, on national flags, and in contemporary films and literature. Lions have been kept in
+               <a href="#"> menageries </a>since the time of the <a href="#">Roman Empire</a> and have been a key species sought for exhibition in <a href="#">zoological gardens</a> across the
+                world since the late 18th century. <a href="#">Cultural depictions of lions</a> were prominent in <a href="#">Ancient Egypt</a>, and depictions have occurred in
+                virtually all ancient
+                and medieval cultures in the lion's historic and current range.
+               </div>
+
+            </div>
+
+            <div class="etymology">
+                Etymology
+            </div>
+                <hr width="95%" size="2">
+               <div class="content">
+                The English word <i>lion</i> is derived via <a href="#">Anglo-Norman</a> <i>liun</i> from <a href="#">Latin</a> <i>leōnem</i>(nominative: <i>leō</i>), which in
+                turn was a borrowing from <a href="#">Ancient Greek</a> λέων <i>léōn</i>. The <a href="#">Hebrew</a> word לָבִיא lavi may also be related.<a href="#"><sup>[4]</sup></a> The generic name
+                <i>Panthera</i> is traceable to the classical Latin word 'panthēra' and the ancient Greek word πάνθηρ 'panther'.<a href="#"><sup>[5]</sup></a>
+               </div>
+            
+
+            <div class="taxonomy">
+                Taxonomy
+                </div>
+                    <hr width="95%" size="2">
+                    <div class="content">
+                <i>Felis leo</i> was the <a href="#">scientific name</a> used by <a href="#">Carl Linnaeus</a> in 1758, who described the lion in his work
+                <a href="#">Systema Naturae. <sup>[3]</sup></a> The genus name <i>Panthera</i> was coined by <a href="#">Lorenz Oken</a> in 1816.<a href="#">[10]</a>  Between the mid-18th and mid-20th
+                centuries, 26 lion <a href="#">specimens</a> were described and proposed as subspecies, of which 11 were recognised as <a href="#">valid</a> in 2005.<a href="#">[1]</a> They were
+                distinguished mostly by the size and colour of their manes and skins. <a href="#">[11]</a>
+
+                <b>Subspecies</b>
+
+                Range map showing distribution of subspecies and clades
+                In the 19th and 20th centuries, several lion type specimens were described and proposed as subspecies,
+                with about a dozen recognised as valid taxa until 2017.[1] Between 2008 and 2016, IUCN Red List
+                assessors used only two subspecific names: P. l. leo for African lion populations, and P. l. persica for
+                the Asiatic lion population.[2][12][13] In 2017, the Cat Classification Task Force of the Cat Specialist
+                Group revised lion taxonomy, and recognises two subspecies based on results of several phylogeographic
+                studies on lion evolution, namely:[14]
+
+        
+                However, there seems to be some degree of overlap between both groups in northern Central Africa. DNA
+                analysis from a more recent study indicates, that Central African lions are derived from both northern
+                and southern lions, as they cluster with P. leo leo in mtDNA-based phylogenies whereas their genomic DNA
+                indicates a closer relationship with P. leo melanochaita.[17]
+
+                Lion samples from some parts of the Ethiopian Highlands cluster genetically with those from Cameroon and
+                Chad, while lions from other areas of Ethiopia cluster with samples from East Africa. Researchers,
+                therefore, assume Ethiopia is a contact zone between the two subspecies.[18] Genome-wide data of a
+                wild-born historical lion sample from Sudan showed that it clustered with P. l. leo in mtDNA-based
+                phylogenies, but with a high affinity to P. l. melanochaita. This result suggested that the taxonomic
+                position of lions in Central Africa may require revision.[19]
+
+             <b>   Fossil records</b>
+
+                Skull of an American lion on display at the National Museum of Natural History
+                Other lion subspecies or sister species to the modern lion existed in prehistoric times:[20]
+
+                P. l. sinhaleyus was a fossil carnassial excavated in Sri Lanka, which was attributed to a lion. It is
+                thought to have become extinct around 39,000 years ago.[21]
+                P. fossilis was larger than the modern lion and lived in the Middle Pleistocene. Bone fragments were
+                excavated in caves in the United Kingdom, Germany, Italy and Czech Republic.[22][23]
+                P. spelaea, or the cave lion, lived in Eurasia and Beringia during the Late Pleistocene. It became
+                extinct due to climate warming or human expansion latest by 11,900 years ago.[24] Bone fragments
+                excavated in European, North Asian, Canadian and Alaskan caves indicate that it ranged from Europe
+                across Siberia into western Alaska.[25] It likely derived from P. fossilis,[26] and was genetically
+                isolated and highly distinct from the modern lion in Africa and Eurasia.[27][26] It is depicted in
+                Paleolithic cave paintings, ivory carvings, and clay busts.[28]
+                P. atrox, or the American lion, ranged in the Americas from Canada to possibly Patagonia.[29] It arose
+                when a cave lion population in Beringia became isolated south of the Cordilleran Ice Sheet about 370,000
+                years ago.[30][31] A fossil from Edmonton dates to 11,355 ± 55 years ago.[32]
+                
+             <b>   Evolution</b>
+
+                
+                The Panthera lineage is estimated to have genetically diverged from the common ancestor of the Felidae
+                around 9.32 to 4.47 million years ago to 11.75 to 0.97 million years ago.[6][33][34] Results of analyses
+                differ in the phylogenetic relationship of the lion; it was thought to form a sister group with the
+                jaguar (P. onca) that diverged 3.46 to 1.22 million years ago,[6] but also with the leopard (P. pardus)
+                that diverged 3.1 to 1.95 million years ago[8][9] to 4.32 to 0.02 million years ago. Hybridisation
+                between lion and snow leopard (P. uncia) ancestors possibly continued until about 2.1 million years
+                ago.[34] The lion-leopard clade was distributed in the Asian and African Palearctic since at least the
+                early Pliocene.[35] The earliest fossils recognisable as lions were found at Olduvai Gorge in Tanzania
+                and are estimated to be up to 2 million years old.[33]
+
+                Estimates for the divergence time of the modern and cave lion lineages range from 529,000 to 392,000
+                years ago based on mutation rate per generation time of the modern lion. There is no evidence for gene
+                flow between the two lineages, indicating that they did not share the same geographic area.[19] The
+                Eurasian and American cave lions became extinct at the end of the last glacial period without
+                mitochondrial descendants on other continents.[27][36][37] The modern lion was probably widely
+                distributed in Africa during the Middle Pleistocene and started to diverge in sub-Saharan Africa during
+                the Late Pleistocene. Lion populations in East and Southern Africa became separated from populations in
+                West and North Africa when the equatorial rainforest expanded 183,500 to 81,800 years ago.[38] They
+                shared a common ancestor probably between 98,000 and 52,000 years ago.[19] Due to the expansion of the
+                Sahara between 83,100 and 26,600 years ago, lion populations in West and North Africa became separated.
+                As the rainforest decreased and thus gave rise to more open habitats, lions moved from West to Central
+                Africa. Lions from North Africa dispersed to southern Europe and Asia between 38,800 and 8,300 years
+                ago.[38]
+
+                Extinction of lions in southern Europe, North Africa and the Middle East interrupted gene flow between
+                lion populations in Asia and Africa. Genetic evidence revealed numerous mutations in lion samples from
+                East and Southern Africa, which indicates that this group has a longer evolutionary history than
+                genetically less diverse lion samples from Asia and West and Central Africa.[39] A whole genome-wide
+                sequence of lion samples showed that samples from West Africa shared alleles with samples from Southern
+                Africa, and samples from Central Africa shared alleles with samples from Asia. This phenomenon indicates
+                that Central Africa was a melting pot of lion populations after they had become isolated, possibly
+                migrating through corridors in the Nile Basin during the early Holocene.[19]
+
+                <b>Hybrids</b>
+                Further information: Panthera hybrid
+                In zoos, lions have been bred with tigers to create hybrids for the curiosity of visitors or for
+                scientific purpose.[40][41] The liger is bigger than a lion and a tiger, whereas most tigons are
+                relatively small compared to their parents because of reciprocal gene effects.[42][43] The leopon is a
+                hybrid between a lion and leopard.[44]
+                </div>
+
+                
+            </div>
+        </div>
+
+            <div class="section-content-right">
+                <table >
+                    <tr>Lion
+                    Temporal range: Pleistocene–Present</tr>
+                    <tr>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/330px-Lion_waiting_in_Namibia.jpg" alt="">
+                    </tr>
+                    <tr>Male in Okonjima, Namibia</tr>
+                    <tr>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Okonjima_Lioness.jpg/330px-Okonjima_Lioness.jpg" alt="">
+                    </tr>
+                    <tr>Female (lioness) in Okonjima</tr>
+                    <tr>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lion_distribution.png/330px-Lion_distribution.png" alt="">
+                    </tr>
+                    <tr>Historical and present distribution of the lion in Africa, Asia and Europe</tr>
+                </table>
+
+            </div>
+            
+
+
+            <div class="section-content-right">
+                
+                <table>
+                    <tr>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Panthera_Atrox.jpg/330px-Panthera_Atrox.jpg" alt="">
+
+                    </tr>
+                    <tr>Skull of an American lion on display at the National Museum of Natural History</tr>
+                </table>
+            </div>
+
+
+            <div class="section-content-right">
+                <table>
+                    <tr>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cave_lion_range.png/330px-Cave_lion_range.png" alt="">
+
+                    </tr>
+                    <tr>Maximal range of the modern lion
+                        and its prehistoric relatives
+                        in the late Pleistocene</tr>
+                </table>
+            </div>
+    </section>
+
+    <!-- main body-------------------------------------------------------------------------------- -->
+
+    <hr width="95%" size="2">
+    <footer>
+        <div class="edit-info">
+            This page was last edited on 23 January 2024, at 22:50 (UTC).
+        </div>
+        <div class="text-two">
+            Text is available under the <a href="#"> Commons Attribution-ShareAlike License 4.0; </a>additional terms
+            may apply. By using this site, you agree to the <a href="">Terms of Use</a> and <a href="">Privacy
+                Policy</a>. Wikipedia® is a registered trademark of the <a href="">Wikimedia Foundation, Inc.,</a> a
+            non-profit organization
+        </div>
+
+        <div class="footer-nav">
+            <a href="#">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="#">About Wikipedia</a>&nbsp;&nbsp;
+            <a href="#">Disclaimers</a>&nbsp;&nbsp;
+            <a href="#">Contact Wikipedia</a>&nbsp;&nbsp;
+            <a href="#">Code of Conduct</a>&nbsp;&nbsp;
+            <a href="#">Developers</a>&nbsp;&nbsp;
+            <a href="#">Statistics</a>&nbsp;&nbsp;
+            <a href="#">Mobile view</a>&nbsp;&nbsp;
+            <a href="">Cookie statement</a>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
