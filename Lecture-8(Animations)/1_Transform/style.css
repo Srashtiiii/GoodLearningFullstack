@@ -1,0 +1,14 @@
+*
+{
+    font-size: 40px;
+}
+
+.div1{
+    width: 400px;
+    height: 500px;
+    background-color: orange;
+    margin: 150px auto;
+    border:5 px solid black;
+    transform: rotate();
+
+}

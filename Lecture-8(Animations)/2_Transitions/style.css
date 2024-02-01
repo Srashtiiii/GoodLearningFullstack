@@ -1,0 +1,19 @@
+.div{
+    width: 400px;
+    height: 500px;
+    background-color: orange;
+    margin: 150px auto;
+    border:5px solid black;   
+    transition-delay: 2s;
+    /* transition-duration: 4s; */
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+.div:hover{
+    transition: rotateZ(1800deg);
+    transition-duration: 2s;
+    border-radius: 50%;
+}

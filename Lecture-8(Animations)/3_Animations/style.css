@@ -1,0 +1,34 @@
+.loader
+{
+    height: 200px;
+    width: 1200px;
+    margin: 100px auto;
+    border: 4px solid black;
+
+}
+
+.loading
+{
+    height: 100%;
+    width: 0%;
+    background-color: orange;
+    animation-name: loading-ani 3s ;
+    animation-iteration-count: 1;
+
+    /* transition-duration: 3s; */
+}
+
+.loader:hover .loading{
+ width: 100%;
+}
+
+@keyframes loading-ani{
+    from
+    {
+        width: 0%;
+    }
+    to
+    {
+        width: 100%;
+    }
+}
