@@ -1,0 +1,168 @@
+#navbar
+{
+    height: 80px;
+    border: 1px solid black;
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100;
+}
+
+.nav-logo
+{
+    width: 200px;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://logos-world.net/wp-content/uploads/2023/07/Medium-Logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  
+
+}
+
+.nav-links
+{
+    /* border: 1px solid black; */
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav-item
+{
+    text-decoration: none;
+    height: 20px;
+    font-size:  20px; 
+}
+
+.nav-item:link{
+    color: black;
+}
+
+.nav-item:visited
+{
+    color: black;
+}
+
+.get-started
+{
+    font-size: 16px;
+    height: 30px;
+    width: 90px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    position: relative;
+    
+}
+
+.get-started:hover
+{
+    cursor: pointer;
+}
+
+.circle-1, 
+.circle-2
+{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    top: 0;
+}
+
+.circle-1
+{
+    left: -15px;
+}
+
+
+.circle-2
+{
+    right: -15px;
+}
+
+.get-started span
+{
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.trending-heading{
+   align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.trending-heading-text
+{
+    font-size: 16px;
+   
+}
+
+.trending-heading img
+{
+    height: 30px;
+    display: inline-block;
+}
+
+.article
+{
+    display: flex;
+    gap: 10px;
+}
+
+
+.article-no,
+.article-detail
+{
+    border: 1px solid black;
+}
+
+.article-detail
+{
+    flex-grow: 1;
+}
+
+.article-no{
+    color: #706c6c;
+    font-size: 40px;
+}
