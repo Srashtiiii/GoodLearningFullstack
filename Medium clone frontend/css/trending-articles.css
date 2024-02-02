@@ -1,0 +1,156 @@
+*
+{
+    font-family: sans-serif;
+}
+.trending-articles
+{
+    margin-top: 100px;
+}
+
+.articles-list
+{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.trending-heading{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+ 
+
+ .trending-heading-text
+ {
+    font-size: 16px;  
+ }
+ 
+ .trending-heading img
+ {
+     height: 30px;
+     display: inline-block;
+ }
+ 
+ .article
+ {
+    width: 30%;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 10px;
+ }
+ 
+ 
+ /* .article-no,
+ .article-detail
+ {
+      border: 1px solid black; 
+ } */
+ 
+
+
+ .article-detail
+ {
+     flex-grow: 1;
+ }
+ 
+ .article-no
+ {
+     color: #c2b7b7;
+     font-size: 40px;
+ }
+
+ .article-detail-1
+ {
+    align-items: center;
+    display: flex;
+    /* gap: 10px; */
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 200;
+ }
+
+ .article-detail-1 img
+ {
+    height: 18px;
+    display: inline-block;
+    margin-right: 5px;
+ }
+ 
+
+ .article-detail-2
+ {
+    font-weight: 600;
+    margin-bottom: 5px;
+ }
+
+.article-author-detail
+{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.article-author-detail span
+{
+    font-weight: 500;
+}
+
+
+.article-detail-3
+{
+    font-weight: 300;
+    color: gray;
+    font-size: 14px;
+}
+
+.article-read-time::after
+{
+    content: "\2B50";
+}
+
+.about-author{
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    top: -80px;
+    right: -255px;
+    height: fit-content;
+    width: 250px;
+    z-index: 1;
+    padding: 10px;
+    background-color: white;
+    display: none;
+}
+
+
+.author:hover .about-author
+{
+    display: block;
+}
+
+.author:hover
+{
+    cursor: pointer;
+}
+.author
+{
+    position: relative;
+}
+
+.about-heading
+{
+    font-style: bold;
+
+}
+
+.about-sub-heading
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: blue;
+    font-size: 10px;
+}
