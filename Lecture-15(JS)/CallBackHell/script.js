@@ -1,23 +1,25 @@
 function download(cb)
 {
-    console.log("Download starts");
+    console.log("Download started");
     setTimeout(function()
     {
-        console.log("Download ends");
+        console.log("Download ended");
         cb(upload);
     },2000);
 
 }
 
 
+
+
 function compress(cb)
 {
 
     
-    console.log("Compression starts");
+    console.log("Compression started");
     setTimeout(function()
     {
-        console.log("Compression ends");
+        console.log("Compression ended");
         cb();
     },2000);
 
@@ -27,10 +29,10 @@ function compress(cb)
 function upload()
 {
     
-    console.log("Upload starts");
+    console.log("Upload started"); 
     setTimeout(function()
     {
-        console.log("Upload ends");
+        console.log("Upload ended");
     },2000);
 
 }
