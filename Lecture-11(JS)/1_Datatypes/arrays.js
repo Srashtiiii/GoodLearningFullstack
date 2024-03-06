@@ -16,7 +16,7 @@ for(let i=0 ; i<arr.length ; i++)
     str+=arr[i] + " ";
 }
 
-console.log(str);
+ console.log(str);
 
 //input in js front command line
 console.log(process.argv);
