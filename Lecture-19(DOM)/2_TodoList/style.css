@@ -1,0 +1,41 @@
+*{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    padding: 5px;
+    color: white;
+    background-color: tomato;
+    border: 0;
+    border-radius: 5px;
+}
+
+.inp{
+    padding: 4px;
+    width: 70%;
+}
+
+.container
+{
+    width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.upbtn,
+.downbt,
+.deletebtn{
+    background-color: royalblue;
+    color: white;
+    width: 10px;
+}
+
+.taskItem
+{
+    margin: 10px auto;
+    list-style: none;
+}
+
+li:first-child
