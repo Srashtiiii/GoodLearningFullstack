@@ -7,7 +7,6 @@ btn.addEventListener('click', () => {
     console.log(taskName);
     let li=document.createElement('li');
     li.innerText=taskName;
-    
     movieList.appendChild(li);
 
 })
