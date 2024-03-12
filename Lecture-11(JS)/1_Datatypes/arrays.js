@@ -1,4 +1,8 @@
- let arr=[1,2,3,4,5,];
+
+
+
+
+let arr=[1,2,3,4,5,];
 
 console.log(arr);
 console.log("Length :", arr.length);
@@ -20,3 +24,4 @@ for(let i=0 ; i<arr.length ; i++)
 
 //input in js front command line
 console.log(process.argv);
+
