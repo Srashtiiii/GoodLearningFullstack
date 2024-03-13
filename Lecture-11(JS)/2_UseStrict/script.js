@@ -1,4 +1,5 @@
-var a=10;
+'use strict'; // ab variables ke bina bucker nahi ban sakti.
+a=10;
 console.log(a);
 
 
