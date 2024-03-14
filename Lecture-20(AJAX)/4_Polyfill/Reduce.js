@@ -1,11 +1,11 @@
 let arr=[1,2,3,4,5];
 
-Array.prototype.myReduce = function(fun)
+Array.prototype.myReduce = function(fun, initVal)
 {
         let arr=this;
         let acc, start_indx;
 
-        if(typeof(intiVal) != undefined) 
+        if(typeof(intiVal) != "undefined") 
         {
             acc = intiVal;
             start_indx = 0;
@@ -22,9 +22,9 @@ Array.prototype.myReduce = function(fun)
         return acc;
 }
 
-let x= arr.reduce((acc,val,indx,arr)=>
+let x= arr.myReduce((acc,val,indx,arr)=>
 {
     return acc * val
-},0)
+})
 
 console.log(x);
