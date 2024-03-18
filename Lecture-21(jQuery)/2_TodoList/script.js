@@ -1,16 +1,16 @@
 )
-end (
+end(
     $('<h1>').text('ToDo List').addClass('heading')
 
-    end (
+    end(
         ('<div')
-        .addClass('inputDetails')
-        .append(
-            $('<input>')
-            .attr('placeholder','Enter New Task')
-            .attr('type', 'text')
-            .addClass('newTask')
-        )
+            .addClass('inputDetails')
+            .append(
+                $('<input>')
+                    .attr('placeholder', 'Enter New Task')
+                    .attr('type', 'text')
+                    .addClass('newTask')
+            )
 
     )
 )
