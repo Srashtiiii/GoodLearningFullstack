@@ -6,3 +6,8 @@ console.log("\\n == \\t:",'\n' == '\t'); // false because of no type conversion
 console.log("Converting +\\t to Number :", +'\t');
 console.log("+\\n :", +'\n');
 console.log("+Hello :", +'Hello');
+
+console.log("[] == 0 :", [] == 0); //true
+console.log("\\t == 0 :", '\t' == 0); //true
+console.log("[] == \\t :", [] == '\t'); // false
+console.log("+[] == \\t :", +[] == '\t'); //true
