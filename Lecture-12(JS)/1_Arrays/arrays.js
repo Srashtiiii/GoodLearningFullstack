@@ -14,3 +14,7 @@ console.log(arr);
 arr.pop();
 console.log(arr);
 
+
+//for seraching a index of a element of array
+let indx = arr.indexOf('hello');
+console.log("Index ",indx);
