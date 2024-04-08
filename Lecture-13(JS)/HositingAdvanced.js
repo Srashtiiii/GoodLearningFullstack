@@ -15,6 +15,7 @@ console.log(x);
 var x=10;
 
 
+
 console.log(x);
 
 var hello=function(name){
@@ -25,3 +26,4 @@ var x=20;
 
 console.log(x);
 hello("gautam");
+
