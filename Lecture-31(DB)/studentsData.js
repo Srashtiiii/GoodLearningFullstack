@@ -32,12 +32,6 @@ db.students.updateMany(
     }
 )
 
-db.students.updateMany(
-    {
-        marks:90
-    }
-
-)
 
 db.students.find({
     $and:[
