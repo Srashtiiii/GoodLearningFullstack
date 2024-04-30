@@ -27,4 +27,4 @@ p.then(function(msg){
 
 .catch(function(err){
     console.log("error aaya h", err);
-})
+});
