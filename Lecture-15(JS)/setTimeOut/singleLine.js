@@ -3,6 +3,3 @@ let id= setTimeout(function (){
 },5000, setTimeout(function () {
     clearTimeout(id);
 }, 6000));
-
-
-
