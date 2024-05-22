@@ -13,7 +13,6 @@ function downloadMovie(url){
     })
 }
 
-
 downloadMovie('myurl.com/avengers.mp4')
 .then(function(movie){
     console.log(movie);
@@ -21,4 +20,3 @@ downloadMovie('myurl.com/avengers.mp4')
 {
     console.log(err);
 })
-
