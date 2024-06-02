@@ -18,5 +18,14 @@ let person2={
 //1. call ke through bind krna: inbuilt function to change the bind inside hello function
 //SYNTAX: hello.call(this, arguments);
 //hello.call(person1); //hello ke andar jo this hoga that will point to 'person1'
-hello.call(person2,"Delhi","India"); 
-g
+// hello.call(person2,"Delhi","India"); 
+
+//2.Apply ke through bind krna:inbuilt function to change the bind inside hello function
+//here arguments are written inside array
+//SYNTAX:hello.apply(this,[arguments]);
+// hello.apply(person2,["Delhi","USA"]);
+
+//call and apply ek dum immediately funcition ko call/invoke kr dete hai
+
+
+
