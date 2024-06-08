@@ -1,5 +1,5 @@
 let btn=document.querySelector('.btn');
-let movieList=btn.querySelector('.movieList');
+let movieList=document.querySelector('.movieList');
 
 let movie=[
     "Avengers",
@@ -27,5 +27,5 @@ btn.addEventListener("click", ()=> {
         li.innerText = movieList[i];
         movieList.appendChild(li);
         i++;
-    })
-}
+    }
+})

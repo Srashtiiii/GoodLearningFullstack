@@ -25,11 +25,11 @@ button{
 }
 
 .upbtn,
-.downbt,
+.downbtn,
 .deletebtn{
     background-color: royalblue;
     color: white;
-    width: 10px;
+    width: 20%;
 }
 
 .taskItem
@@ -38,4 +38,7 @@ button{
     list-style: none;
 }
 
-li:first-child
+li:first-child .upbtn,
+li:last-child .downbtn{
+    display: none
+}
