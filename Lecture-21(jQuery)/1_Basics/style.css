@@ -1,0 +1,19 @@
+.button{
+    background-color: pink;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.movies{
+    font-size: 40px;
+    list-style: none;
+    font-weight: 800;
+}
+
+.movies li:nth-child(n){
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
