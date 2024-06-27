@@ -6,10 +6,10 @@ const PORT=4444;
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
+app.get('/gettask',(req,res)=>{
+    const {task} = req.query;
+    res.send(task);
+})
 
 
 app.listen(PORT,()=>{
