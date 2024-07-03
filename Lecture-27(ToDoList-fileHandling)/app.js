@@ -1,20 +1,22 @@
+//leraning to build APIs
+
 const path=require('path');
 const express = require('express');
 const app = express();
-const PORT=4444;
+const PORT=3000;
+
+app.use(express.urlencoded({extended: true}));
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+let todos =['cricket', 'dance', 'singular', 'hockey'];
 
-// app.get('/',(req, res) => {
-//     const{name} = req.query;
-//     res.send("hello world!");
-// })
 
-app.post('/form',(req,res)=>{
-
+//1. GET '/todos': return all the todos
+app.get('/todos',(req,res)=>{
+    res.send(todos);
 })
 
-app.listen(PORT, () => {
-    console.log(`http://localhost:`+PORT);
+//2. POST '/todos': add a newTask to todos array
+app.listen(PORT,() => {
+    console.log(`http"//localhost:`+PORT);
 });
